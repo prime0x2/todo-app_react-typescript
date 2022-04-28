@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        color: #fafafa;
+        box-sizing: border-box;
+        font-family: "Signika Negative", sans-serif;
+    }
+
+    body {
+        @apply min-h-screen flex flex-col items-center justify-center bg-slate-900 text-center;
+    }
+}
+
+@layer components {
+    .todo__form {
+        @apply w-[400px] mx-auto bg-slate-800 p-10 rounded-lg shadow-2xl;
+    }
+
+    .input__group {
+        @apply flex items-center justify-center border border-cyan-600 rounded-md overflow-hidden;
+    }
+
+    .input__group input {
+        @apply flex-1 bg-transparent outline-none px-4 py-2 tracking-wider;
+    }
+
+    .input__group button {
+        @apply px-4 py-2 hover:bg-slate-700/90 duration-300;
+    }
+
+    .todo__item {
+        @apply flex items-center justify-center mt-5 ring-1 rounded-md pl-4 overflow-hidden hover:ring-blue-500 duration-300;
+    }
+
+    .todo__item input {
+        @apply h-[13px] w-[13px];
+    }
+
+    .todo__item label {
+        @apply flex-1 text-left px-4 py-2;
+    }
+
+    .todo__remove {
+        @apply px-4 py-2 hover:bg-slate-700/90 duration-300;
+    }
+}
